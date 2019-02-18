@@ -65,7 +65,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	["LTD Gasoline Grove Street"] = {
 		Pos			= { x = -43.057, y = -1748.811, z = 28.421 },
@@ -80,7 +80,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 80,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	
@@ -97,7 +97,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Sandy Shore RobLiquor 1016 Algonquin Boulevard"] = {
@@ -113,7 +113,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Sandy Shore 24/7 928 Route 68"] = {
@@ -129,7 +129,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Sandy Shore 24/7 1036 Alhambra Drive"] = {
@@ -145,7 +145,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Sandy Shore 24/7 957 Senora Fwy"] = {
@@ -161,7 +161,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Grapeseed LTD Gasoline 2013 Main Street"] = {
@@ -177,7 +177,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Paleto 24/7 3030 Senora Fwy"] = {
@@ -193,7 +193,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Great Ocean Hwy 24/7 905 Barbanero Road"] = {
@@ -209,7 +209,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Great Ocean Hwy 24/7 804 Ineseno Road"] = {
@@ -225,7 +225,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Great Ocean Hwy RobsLiquor 815 Great Ocean Hwy"] = {
@@ -241,7 +241,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["LTD Gasoline 817 North Rockford Drive"] = {
@@ -257,7 +257,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["LTD Gasoline 366 Lindsay Circus"] = {
@@ -273,7 +273,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Del Perro RobsLiquor 635 Prosperity Street"] = {
@@ -289,7 +289,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["Del Perro RobsLiquor 333 San Andreas Ave"] = {
@@ -305,7 +305,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["RobsLiquor 449 El Rancho Boulevard"] = {
@@ -321,7 +321,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["LTD Gasoline 411 Mirror Park Boulevard"] = {
@@ -337,7 +337,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	["24/7 574 Clinton Avenue"] = {
@@ -353,7 +353,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 1
 	},
 	
 	--Bar
@@ -370,7 +370,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 2
 	},
 	
 	["Tequi-La-La 513 Eclipse Boulevard"] = {
@@ -386,7 +386,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 2
 	},
 	
 	["Bahama 628 Marathon Avenue"] = {
@@ -402,7 +402,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 2
 	},
 	
 	["Yellow Jack 949 Panorama Drive"] = {
@@ -418,7 +418,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 60,
 		TimeBeforeNewRob 	= 3600,
-		PoliceRequired		= 0
+		PoliceRequired		= 2
 	},
 	
 	
@@ -435,7 +435,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 120,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Fleeca Bank 584 Hawick Avenue"] = {
@@ -449,7 +449,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Fleeca Bank 656 Boulevard Del Perro"] = {
@@ -463,7 +463,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Fleeca Bank 529 Hawick Ave"] = {
@@ -477,7 +477,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Fleeca Bank 814 Great Ocean Hwy"] = {
@@ -491,7 +491,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Paleto Fleeca Bank 3019 Cascabel Ave"] = {
@@ -505,7 +505,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Sandy Shore Fleeca Bank 940 Route 68"] = {
@@ -519,7 +519,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 	
 	["Fleeca Bank 575 Vinewood Boulevard"] = {
@@ -533,7 +533,7 @@ Config.Zones = {
 		Robbed						= 0, -- DO NOT CHANGE
 		TimeToRob					= 300,
 		TimeBeforeNewRob 	= 7200,
-		PoliceRequired		= 0
+		PoliceRequired		= 3
 	},
 
 }
