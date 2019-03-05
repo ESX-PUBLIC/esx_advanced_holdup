@@ -1,6 +1,6 @@
-Config									= {}
-Config.Locale						= 'fr'
-Config.DrawDistance			= 25.0
+Config              = {}
+Config.Locale       = 'fr'
+Config.DrawDistance = 25.0
 
 Config.PercentCurrentMoney = 40 -- % of store current money to transfert to bank
 Config.MaxRandomMultiplier = 2	-- multiplier (musn't go over 100% of PercentCurrentMoney)
@@ -8,8 +8,8 @@ Config.MaxRandomMultiplier = 2	-- multiplier (musn't go over 100% of PercentCurr
 -- partOfCurrentMoney = CurrentMoney * Config.PercentCurrentMoney / 100
 -- randomMoneyToBank 	= math.random(partOfCurrentMoney, partOfCurrentMoney * Config.MaxRandomMultiplier)
 
-Config.AddMoneyToStoresTimeOut	= 10 -- minutes
-Config.AddMoneyToBanksTimeOut		= 60 -- minutes
+Config.AddMoneyToStoresTimeOut = 10 -- minutes
+Config.AddMoneyToBanksTimeOut  = 60 -- minutes
 
 --[[
 ---------- TEMPLATES ----------

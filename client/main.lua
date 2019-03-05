@@ -10,20 +10,20 @@ local Keys = {
 	["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
 }
 
-local PlayerData							= {}
-local IsRobberyStarted				= false
-local isRobberyDone 					= false
-local isInRobberyZone					= false
-local HasAlreadyEnteredMarker	= false
-local LastZone								= nil
-local CurrentAction						= nil
-local CurrentActionMsg				= ''
-local CurrentActionData				= {}
+local PlayerData = {}
+local IsRobberyStarted = false
+local isRobberyDone = false
+local isInRobberyZone = false
+local HasAlreadyEnteredMarker = false
+local LastZone = nil
+local CurrentAction = nil
+local CurrentActionMsg = ''
+local CurrentActionData = {}
 
 local copsConnected = 0
-local blipRobbery 	= nil
-local loopAlarm			= false
-local isPedArmed		= false
+local blipRobbery = nil
+local loopAlarm = false
+local isPedArmed = false
 
 ESX	= nil
 
@@ -49,6 +49,7 @@ function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
 	SetTextEdge(1, 0, 0, 0, 255)
 	SetTextDropShadow()
 	SetTextOutline()
+
 	SetTextEntry("STRING")
 	AddTextComponentString(text)
 	DrawText(x - width/2, y - height/2 + 0.005)
@@ -61,7 +62,7 @@ function RobberyZoneEvents(zone)
 			Citizen.Wait(100)
 
 			local playerPed = PlayerPedId()
-			local coords 		= GetEntityCoords(playerPed)
+			local coords = GetEntityCoords(playerPed)
 			local zoneTable = Config.Zones[zone]
 
 			if GetDistanceBetweenCoords(coords, zoneTable.Pos.x, zoneTable.Pos.y, zoneTable.Pos.z, true) > zoneTable.AreaSize then
@@ -73,7 +74,6 @@ function RobberyZoneEvents(zone)
 					loopAlarm = false
 				end
 			end
-
 		end
 	end)
 end
@@ -127,29 +127,31 @@ end)
 
 RegisterNetEvent('esx_advanced_holdup:startRobberingTimer')
 AddEventHandler('esx_advanced_holdup:startRobberingTimer', function(zone)
-
 	isInRobberyZone = true
-	isRobberyDone		= false
-	loopAlarm 			= true
+	isRobberyDone = false
+	loopAlarm = true
+
 	RobberyZoneEvents(zone)
 	TriggerEvent('esx_advanced_holdup:loopAlarmTriggered', zone)
 
 	local timer = Config.Zones[zone].TimeToRob
-  Citizen.CreateThread(function()
-    while timer > 0 and isInRobberyZone do
-      Citizen.Wait(1000)
-      if(timer > 0)then
-        timer = timer - 1
-      end
-    end
-  end)
-  Citizen.CreateThread(function()
-    while timer > 0 and isInRobberyZone do
-      Citizen.Wait(6)
-      drawTxt(0.85, 1.4, 1.0,1.0,0.4, _U('robbery_in_progress', zone, timer), 255, 255, 255, 255)
-    end
+
+	Citizen.CreateThread(function()
+		while timer > 0 and isInRobberyZone do
+			Citizen.Wait(1000)
+
+			if timer > 0 then
+				timer = timer - 1
+			end
+		end
 	end)
 
+	Citizen.CreateThread(function()
+		while timer > 0 and isInRobberyZone do
+			Citizen.Wait(6)
+			drawTxt(0.85, 1.4, 1.0,1.0,0.4, _U('robbery_in_progress', zone, timer), 255, 255, 255, 255)
+		end
+	end)
 end)
 
 RegisterNetEvent('esx_advanced_holdup:loopAlarmTriggered')
@@ -161,17 +163,13 @@ AddEventHandler('esx_advanced_holdup:loopAlarmTriggered', function(zone)
 end)
 
 AddEventHandler('esx_advanced_holdup:hasEnteredMarker', function(zone)
-
 	CurrentAction     = 'start_robbery'
 	CurrentActionMsg  = _U('press_to_rob')
 	CurrentActionData = {zone = zone}
-
 end)
 
 AddEventHandler('esx_advanced_holdup:hasExitedMarker', function(zone)
-
 	CurrentAction = nil
-
 end)
 
 -- Display markers
@@ -180,7 +178,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(8)
 
 		local playerPed = PlayerPedId()
-		local coords 		= GetEntityCoords(playerPed)
+		local coords = GetEntityCoords(playerPed)
 
 		if isPedArmed then
 			for _, v in pairs(Config.Zones) do
@@ -192,7 +190,6 @@ Citizen.CreateThread(function()
 			Citizen.Wait(500)
 		end
 	end
-
 end)
 
 -- Enter / Exit marker events
@@ -200,26 +197,25 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(10)
 
-		local playerPed			= PlayerPedId()
-		local coords				= GetEntityCoords(playerPed)
-		local isInMarker		= false
-		local isEnoughCops 	= false
-		local currentZone		= nil
+		local playerPed = PlayerPedId()
+		local coords = GetEntityCoords(playerPed)
+		local isInMarker = false
+		local isEnoughCops = false
+		local currentZone = nil
 
 		if IsPedArmed(playerPed, 4) then
-			isPedArmed 		= true
-			local coords	= GetEntityCoords(playerPed)
+			isPedArmed = true
 			for k, v in pairs(Config.Zones) do
 				if v.PoliceRequired <= copsConnected and GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < v.Size.x then
-					isInMarker		= true
-					isEnoughCops	= true
-					currentZone 	= k
+					isInMarker = true
+					isEnoughCops = true
+					currentZone = k
 				end
 			end
 
 			if (isInMarker and not HasAlreadyEnteredMarker and isEnoughCops) or (isInMarker and LastZone ~= currentZone and isEnoughCops) then
 				HasAlreadyEnteredMarker = true
-				LastZone								= currentZone
+				LastZone = currentZone
 				TriggerEvent('esx_advanced_holdup:hasEnteredMarker', currentZone)
 			end
 		else
@@ -235,7 +231,6 @@ Citizen.CreateThread(function()
 		if not isPedArmed then
 			Citizen.Wait(500)
 		end
-
 	end
 end)
 
@@ -247,24 +242,19 @@ Citizen.CreateThread(function()
 		if CurrentAction == nil then
 			Citizen.Wait(250)
 		else
-
 			ESX.ShowHelpNotification(CurrentActionMsg)
 
-			if IsControlJustReleased(1,  Keys['E']) and GetLastInputMethod(2) then
-
+			if IsControlJustReleased(0, Keys['E']) and IsInputDisabled(0) then
 				local playerPed = PlayerPedId()
-				if IsPedSittingInAnyVehicle(playerPed) then
+				if not IsPedOnFoot(playerPed) then
 					ESX.ShowNotification(_U('can_inside_vehicle'))
 				else
 					local zone = CurrentActionData.zone
 					TriggerServerEvent('esx_advanced_holdup:robberyInProgress', zone)
 				end
 
-
 				CurrentAction = nil
-
 			end
-
 		end
 
 	end

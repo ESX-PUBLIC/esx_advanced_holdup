@@ -2,7 +2,6 @@
 
 ESX Advanced Holdup
 
-
 [INSTALLATION]
 
 1) CD in your resources/[esx] folder
